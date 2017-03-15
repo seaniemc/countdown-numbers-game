@@ -1,7 +1,7 @@
 #lang racket
 (define start-perm (list -1 -1 -1 -1 1 1 1 1))
 
- (define x (remove-duplicates (permutations start-perm))
+ (define x (remove-duplicates (permutations start-perm)))
 
 (define (make-rpn l)
   (append (list 1 1) l (list -1)))
