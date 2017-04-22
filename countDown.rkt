@@ -23,4 +23,31 @@ myNumber
         [(eq? msg 'stack) stack]
         [else "Not valid message!"]))))
 
+#|(define s (make-stack))
+(s 'push! 'a)
+(s 'push! 'b 'c 'd)
+(s 'stack)
+(s 'pop!)
+(s 'stack)|#
+
+
+;
+;https://rosettacode.org/wiki/Parsing/RPN_calculator_algorithm#Racket
+(define (calculate-RPN expr)
+  (for/fold ([stack '()]) ([token expr])
+    (printf "~a\t -> ~a~N" token stack)
+    (match* (token stack)
+     [((? number? n) s) (cons n s)]
+     [('+ (list x y s ___)) (cons (+ x y) s)]
+     [('- (list x y s ___)) (cons (- y x) s)]
+     [('* (list x y s ___)) (cons (* x y) s)]
+     [('/ (list x y s ___)) (cons (/ y x) s)]
+     [('^ (list x y s ___)) (cons (expt y x) s)]
+     [(x s) (error "calculate-RPN: Cannot calculate the expression:" 
+                   (reverse (cons x s)))])))
+
+
+(calculate-RPN '(100 25 * 6 1 * 5 - 2 3 * +))
+
+
 
