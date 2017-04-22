@@ -1,12 +1,15 @@
 #lang racket
 
 ;this function creates all of the possible combinations of the list 
-(define all-nums
-  (permutations (list 100 50 25 10 2 1)))
+(define all-nums (list 100 50 25 10 2 1))
 
-(define ops (list '+ '- '* '/))
+(define ops-list (list '+ '- '* '/))
 
-(define all-ops (cartesian-product ops ops ops ops))
+(define main-list (append all-nums ops-list))
 
-all-ops
+;main-list
+;all-ops
 ;all-nums
+
+(define noDups (remove-duplicates (permutations main-list)))
+noDups

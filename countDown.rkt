@@ -10,11 +10,21 @@ myNumber
 ;The list of numbers used to calculate the random target.
 (define numbers(list 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 25 50 75 100))
 
+;The list of all the operators.
+(define operators (list + - * /))
 
+(define (randomlist n mx)
+  (cond
+    [(= n 0) empty]
+    [else
+     (cons (+ 1 (random mx))
+           (randomlist (- n 1) mx))]))
+
+(randomlist numbers 6)
 
 ;this function creates a stack which we will use to push and pop items from the list.
 ;It was taken from: http://stackoverflow.com/questions/29244677/implementation-of-lifo-list-in-scheme
-(define (make-stack)
+#|(define (make-stack)
   (let ((stack '()))
     (lambda (msg . args)
       (cond 
@@ -22,8 +32,7 @@ myNumber
         [(eq? msg 'push!) (set! stack (append (reverse args) stack))]
         [(eq? msg 'stack) stack]
         [else "Not valid message!"]))))
-
-#|(define s (make-stack))
+(define s (make-stack))
 (s 'push! 'a)
 (s 'push! 'b 'c 'd)
 (s 'stack)
@@ -33,7 +42,7 @@ myNumber
 
 ;
 ;https://rosettacode.org/wiki/Parsing/RPN_calculator_algorithm#Racket
-(define (calculate-RPN expr)
+#|(define (calculate-RPN expr)
   (for/fold ([stack '()]) ([token expr])
     (printf "~a\t -> ~a~N" token stack)
     (match* (token stack)
@@ -47,7 +56,7 @@ myNumber
                    (reverse (cons x s)))])))
 
 
-(calculate-RPN '(100 25 * 6 1 * 5 - 2 3 * +))
+(calculate-RPN '(100 25 * 6 1 * 5 - 2 3 * +))|#
 
 
 

@@ -8,10 +8,10 @@
 
 (map make-rpn x)
 
-  (define (valid-rpn? e [s 0])
-    (if(null? e)
-       (if (= s 1) #t #f)
-       (if (= (car e) l)
-           (valid-rpn? (cdr e) (+ 1 s))
-           ()
-           )))
+ ; (define (valid-rpn? e [s 0])
+   ; (if(null? e)
+      ; (if (= s 1) #t #f)
+      ; (if (= (car e) l)
+          ; (valid-rpn? (cdr e) (+ 1 s))
+           ;()
+          ; )))
