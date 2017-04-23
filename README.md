@@ -25,3 +25,6 @@ How to run
 -------------
 From DrRacket --> File tab --> open --> countDown.rkt  file from file explorer.
 
+Programmed using 
+-------------
+The racket programming [language](https://racket-lang.org/)
