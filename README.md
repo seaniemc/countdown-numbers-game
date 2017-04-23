@@ -1,8 +1,8 @@
 # Count Down Numbers Game
 
-###Student: Sean McGrath
-###G-Number: G00316649
-###Subject: THEORY OF ALGORITHMS
+### Student: Sean McGrath
+### G-Number: G00316649
+### Subject: THEORY OF ALGORITHMS
 
 The aim of the project is to re-create the countdown numbers game, as seeen on the channel 4 TV show countdown using the programming 
 language Racket.  The contestnat is allowed to select 6 numbers at random from 2 different sets of numbers "big" and "small".  
