@@ -12,7 +12,9 @@
 (define myNumber(random 101 999))
 
 ; myNumber prints out the random number. 
-(printf "Target Number: ") myNumber
+;(printf "Target Number: ") myNumber
+myNumber
+(displayln "")
 
 ;this function creates all of the possible combinations of the list 
 (define all-nums (list 100 50 25 10 2 1))
