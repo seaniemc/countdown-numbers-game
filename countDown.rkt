@@ -1,8 +1,10 @@
 #lang racket
+(displayln "Countdown numbers game")
 
 ;The list of numbers used to calculate the random target.
-(define numbers(list 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 25 50 75 100))
 
+(define numbers(list 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 25 50 75 100))
+(printf "List Of Numbers: ")numbers
 ;The list of all the operators.
 (define ops-list (list '+ '- '/ '*))
 
@@ -10,7 +12,7 @@
 (define myNumber(random 101 999))
 
 ; myNumber prints out the random number. 
-myNumber
+(printf "Target Number: ") myNumber
 
 ;this function creates all of the possible combinations of the list 
 (define all-nums (list 100 50 25 10 2 1))
