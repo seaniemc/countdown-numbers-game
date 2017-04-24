@@ -4,6 +4,7 @@
 ;The list of numbers used to calculate the random target.
 
 (define numbers(list 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 25 50 75 100))
+; prints out all the numbers the contestant can choose from
 (printf "List Of Numbers: ")numbers
 ;The list of all the operators.
 (define ops-list (list '+ '- '/ '*))
@@ -12,14 +13,13 @@
 (define myNumber(random 101 999))
 
 ; myNumber prints out the random number. 
-;(printf "Target Number: ") myNumber
-myNumber
-(displayln "")
+(printf "Target Number: ") myNumber
 
-;this function creates all of the possible combinations of the list 
+
+;this is a sample list of 6 numbers
 (define all-nums (list 100 50 25 10 2 1))
-;contains 720 posible combinations
-;(length (remove-duplicates (permutations all-nums)))
+;contains 720 posible unique combinations
+ (length(remove-duplicates (permutations all-nums)))
 
 ; this create a list of all numbers and operators possible
 (define main-list (append all-nums ops-list))
