@@ -27,7 +27,7 @@
 ;a function which creates all the possible permutations which turns out to be 39916800
 ;(define noDups (remove-duplicates (permutations main-list)))
 
-
+(printf "rpn calculator: ")
 ;This function can be used to calculate all instances of valid rpn.
 ;https://rosettacode.org/wiki/Parsing/RPN_calculator_algorithm#Racket
 (define (calculate-RPN expr)
@@ -55,7 +55,7 @@
          #t
          #f)
        (if (number? (car e))
-
+           ;
            (valid-rpn? (cdr e) (+ s 1))
 
       (if(> s 1)
