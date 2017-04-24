@@ -1,13 +1,30 @@
 # Count Down Numbers Game
 
-###Student: Sean McGrath
-###G-Number: G00316649
-###Subject: THEORY OF ALGORITHMS
+### Student: Sean McGrath
+### G-Number: G00316649
+### Subject: THEORY OF ALGORITHMS
 
-The aim of the project is to re-create the countdown numbers game, as seeen on the channel 4 TV show countdown using the programming 
-language Racket.  The contestnat is allowed to select 6 numbers at random from 2 different sets of numbers "big" and "small".  
-The big set contains the numbers {25, 50, 75, 100}  
-The small set contains the numbers {1 , 1 , 2 , 2 , 3 , 3 , 4 , 4 , 5 , 5 , 6 , 6 , 7 , 7 , 8 , 8 , 9 , 9 , 10 , 10} From 1 - 10.  
-The contestant can take as many numbers as they want from the big (from one -> all four) and the remaing numbers are then taken from 
-the "small" set. 
-A number between 101 - 999 is randomly generated, which the contestant is then asked to calculate this number using the selected numbers from the "big" and "small" sets. The contestant can reach the chosen target by using just the four basic arithmetic operators + - × ÷.
+**Summary**
+------------------
+The objective of this application was to replicate the countdown numbers game using the programming language Racket. The game is simple to understand the contestant chooses at random 6 numbers from 2 sets containing small numbers and big numbers. Then they are given a random number, which they have to calculate using the given small and large numbers. 
+There is a **Wiki** for this repo which explains in greater detail the workings of the game and the process in which the game was developed. 
+
+ 
+Getting Started
+------------------
+Download or clone the repository 
+
+    https://github.com/seaniemc/countdown-numbers-game.git
+
+What you need 
+-------------
+
+DrRacket to run the countDown.rkt script. [Download from here](https://racket-lang.org/download/)
+
+How to run 
+-------------
+From DrRacket --> File tab --> open --> countDown.rkt  file from file explorer.
+
+Programmed using 
+-------------
+The racket programming [language](https://racket-lang.org/)
